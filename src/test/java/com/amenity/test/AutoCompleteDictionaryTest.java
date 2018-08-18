@@ -1,5 +1,7 @@
-package com.amenity.test.interview;
+package com.amenity.test;
 
+import com.amenity.test.interview.AutoCompleteDictionary;
+import com.amenity.test.interview.DictionaryNode;
 import org.junit.Assert;
 import org.junit.Test;
 
