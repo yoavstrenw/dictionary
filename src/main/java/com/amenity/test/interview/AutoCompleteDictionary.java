@@ -17,7 +17,7 @@ import java.util.stream.Collectors;
 public class AutoCompleteDictionary {
 
     private int numOfSuggetions = 3;
-    private DictionaryNode root ;
+    private DictionaryNode root;
 
     public AutoCompleteDictionary(int numOfSuggetions) {
         this.numOfSuggetions = numOfSuggetions;
@@ -29,7 +29,7 @@ public class AutoCompleteDictionary {
     }
 
     public List getAutocompleteCandidates(String prefix) {
-        return getSuggestions(root, prefix);
+        return getSuggestions(root, prefix.toLowerCase());
     }
 
     public List<String> getSuggestions(DictionaryNode curr, String prefix) {
@@ -59,8 +59,6 @@ public class AutoCompleteDictionary {
         handleTopXWords(current, wordNode);
         return wordNode;
     }
-
-
 
 
     private DictionaryNode findNodeByPrefix(DictionaryNode curr, String prefix) {
